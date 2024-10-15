@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link:-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body{
+     font-family:"Poppins", sans-serif;
+     overflow-x: hidden;
+    }
+    #home{
+        display: flex;
+        align-items: center;
+    }
+    .navbar{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    @keyframes Spin {
+         0%{
+            transform: rotate(0deg);
+         }
+         100%{
+            transform: rotate(360deg);
+         }
+    }
+    #pokemonball{
+        
+          animation: Spin infinite 1s;
+    }
+
+ </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger">
+        <div class="container-xxl">
+            <a href="#home" class="navbar-brand text-light">
+                <img src="/assets/pokeball.png" alt="pokeball" height="16">
+                Pokemon
+            </a>
+           <!--TOGGLE BUTTON FOR MOBILE NAV-->
+           <button 
+           class="navbar-toggler" 
+           type="button" 
+           data-bs-toggle="collapse"
+           data-bs-target="#main-nav"
+           aria-controls="main-nav"
+           aria-expanded="false"
+           aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon" style="z-index: 1;"></span>
+         </button>
+         
+         <div class="collapse navbar-collapse justify-content-end align-center" 
+              id="main-nav">               
+                    <ul class="navbar-nav px-2">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#search" class="nav-link">Search</a></li>
+                </ul>
+            </div>
+           
+         
+        </div>
+        
+    </nav>
+    <section id="home" style="height: 90vh;">
+        <div class="container-lg">
+            <div class="row justify-content-center align-items-center px-2 ">
+                <div class= "col-12 col-lg-6">
+                    <h2>
+                        Gotta Catch 'Em All
+                    </h2>
+                    <p class="lead text-start text-muted fs-5">
+                        Welcome to Pokemon—your ultimate hub for discovering Pokémon, sharing tips, and connecting with fellow Trainers on your journey to become a Pokémon Master!                    </p>
+                    <a href="#search" class="btn btn-danger">
+                        Search Pokemon
+                    </a>
+                </div>
+                <div class="col-6 text-center d-lg-block d-none">
+                    <img src="/assets/charizard.png" alt="" class="fluid bg-warning rounded-circle p-1" height="300" style="box-shadow: 2px 2px 8px #d5d5d5;">
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="col-fluid ">
+            <div class="rowjustify-content-center align-items-center">
+                <div class="col-l px-2 text-center">
+                    <h2>First Generation Pokemon</h2>
+                </div>
+                <div class="row g-1 justify-content-center my-2">
+                    <div class="col-7 col-lg-4 col-xl-3">
+                        <div class="card py-2" style="width: 18rem; margin: auto;">
+                            <img src="/assets/charizard.png" alt="charizard" class="card-img-top" style="height: 10em; width: 10em; margin: auto; ">
+                            <div class="card-body">
+                                <h3 class="h5 text-center">Charizard</h3>
+                                <p class="card-text fs-6">
+                                    Charizard is a powerful and majestic Pokémon known for its fierce loyalty and fiery breath. With its large, dragon-like wings, it soars through the skies, unleashing intense flames on foes. Trainers value Charizard for its speed and strength in battle, making it a formidable opponent and a beloved companion.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7 col-lg-4 col-xl-3">
+                        <div class="card py-2" style="width: 18rem; margin: auto;">
+                            <img src="/assets/blastoise.png" alt="charizard" class="card-img-top" style="height: 10em; width: 10em; margin: auto; ">
+                            <div class="card-body">
+                                <h3 class="h5 text-center">Blasttoise</h3>
+                                <p class="card-text">
+                                    Blastoise is a massive turtle-like Pokémon renowned for its water cannons that can blast powerful streams of water. With a calm demeanor and sturdy shell, Blastoise excels in defense and offensive capabilities, making it a reliable choice in any battle. Its ability to control water makes it a key ally for Trainers in both competitive and casual settings.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7 col-lg-4 col-xl-3">
+                        <div class="card py-2" style="width: 18rem; margin: auto;">
+                            <img src="/assets/venusaur.png" alt="charizard" class="card-img-top" style="height: 10em; width: 10em; margin: auto; ">
+                            <div class="card-body">
+                                <h3 class="h5 text-center">Venusaur</h3>
+                                <p class="card-text">
+                                    Venusaur is a large, dinosaur-like Pokémon that features a blooming flower on its back. Known for its ability to absorb sunlight, it unleashes potent energy attacks while also utilizing its toxic spores to incapacitate opponents. Venusaur’s balance of offense and defense, combined with its unique abilities, makes it a versatile Pokémon in any Trainer's lineup.                                </p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="search">
+        <div class="col-fluid">
+              <div class="row justify-content-center align-items-center py-5">
+                 <h5 class="text-center">Search your Favorite Pokemon</h5>
+                 <div class="col-6">
+                     <form style="height: 20em; margin: auto;" class="bg-danger rounded-3 p-2 col-lg-8">
+                        <label for="searchPokemon" class="text-light">Search:</label>
+                        <input type="text" placeholder="Search Pokemon..." name="searchPokemon" class="p-1" style="width: 100%;" >
+                    </form>
+                 </div>
+                 <div class="col-6 text-center">
+                    <img src="/BootStrap  project1/assets/pokeball.png" id="pokemonball" alt="" height="108">
+                 </div>
+              </div>
+        </div>
+    </section>
+
+    <footer class="text-center fs-12">©2024 Miro Ivan Sarte Powered by: BootStrap 5</footer>
+
+
+    <!--script-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    // Select all the links in the navbar
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Collapse the navbar
+            const navbarCollapse = document.getElementById('main-nav');
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+        });
+    });
+</script>
+
+</body>
+</html>
